@@ -668,7 +668,7 @@ body {
   visibility: hidden;
   pointer-events: none;
 
-}
+  }
 
 .modal {
   position: absolute;
@@ -679,12 +679,9 @@ body {
   height: 581px;
   background-color: var(--hero-text-color);
 
-  
-  animation-name: changeModScale;
-  animation-duration: 500ms;
-  animation-timing-function: linear;
-  animation-delay: 100ms;
-  }
+  scale: 1.25;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   }
 
 .modal-close-btn {
   position: absolute;
@@ -702,12 +699,3 @@ body {
   cursor: pointer;
 }
 
-@keyframes changeModScale {
-  0% {
-    scale: 0.5;
-  }
-
-  100% {
-    scale: 1;
-  }
-}
