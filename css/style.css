@@ -418,9 +418,7 @@ body {
 .clients-list-item {
   width: 170px;
   height: 92;
-  border: 1px solid var(--fill-icons-color);
-  border-radius: 4px;
-  transition: border color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     
 }
 
 .clients-list-item:not(:last-child) {
@@ -433,6 +431,8 @@ body {
   align-items: center;
   width: 170px;
   height: 92px;
+  border: 1px solid var(--fill-icons-color);
+  border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -679,9 +679,12 @@ body {
   height: 581px;
   background-color: var(--hero-text-color);
 
-  transition: transform 250ms linear;
-  transform: scale(1.2);
-}
+  
+  animation-name: changeModScale;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-delay: 100ms;
+  }
 
 .modal-close-btn {
   position: absolute;
@@ -697,4 +700,14 @@ body {
   background: var(--hero-text-color);
   padding: 0px;
   cursor: pointer;
+}
+
+@keyframes changeModScale {
+  0% {
+    scale: 0.5;
+  }
+
+  100% {
+    scale: 1;
+  }
 }
